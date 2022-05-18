@@ -1,0 +1,16 @@
+D.R.Y.
+Dont repeat yourself
+
+Take the issue and start writing down ideas and mapping out what you want to accomplish
+-Some type of data that is accessible everywhere in the application
+- Global variable
+- Static Class (normaly you wouldn't store data in a static class
+How do we connect to two different data sources to do the same task?
+
+
+
+
+
+Static class for data source info 
+
+Interface for data sources

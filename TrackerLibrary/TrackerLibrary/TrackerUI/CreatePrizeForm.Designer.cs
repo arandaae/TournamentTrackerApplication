@@ -49,7 +49,7 @@
             this.headerLabel.Location = new System.Drawing.Point(33, 24);
             this.headerLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.headerLabel.Name = "headerLabel";
-            this.headerLabel.Size = new System.Drawing.Size(196, 46);
+            this.headerLabel.Size = new System.Drawing.Size(189, 45);
             this.headerLabel.TabIndex = 12;
             this.headerLabel.Text = "Create Prize";
             // 
@@ -145,7 +145,7 @@
             this.orLabel.Location = new System.Drawing.Point(307, 332);
             this.orLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.orLabel.Name = "orLabel";
-            this.orLabel.Size = new System.Drawing.Size(77, 46);
+            this.orLabel.Size = new System.Drawing.Size(74, 45);
             this.orLabel.TabIndex = 21;
             this.orLabel.Text = "-or-";
             // 
@@ -171,7 +171,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(725, 664);
+            this.ClientSize = new System.Drawing.Size(680, 664);
             this.Controls.Add(this.createPrizeButton);
             this.Controls.Add(this.orLabel);
             this.Controls.Add(this.prizePercentageValue);

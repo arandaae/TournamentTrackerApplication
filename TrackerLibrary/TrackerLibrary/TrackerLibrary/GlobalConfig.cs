@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TrackerLibrary.DataAccess;
+using System.Configuration;
+using System.Data.SqlClient;
 
 namespace TrackerLibrary
 {
@@ -21,9 +24,17 @@ namespace TrackerLibrary
             if (textFiles)
             {
                 //TODO - Create the Text Connection
-                TextConnection text = new TextConnection();
+                TextConnector text = new TextConnector();
                 Connections.Add(text);
             }
+        }
+
+        public static string CnnString(string name)
+        {
+            //Had to add System.Configuration.Configuration nuget package.
+            return ConfigurationManager.ConnectionStrings[name].ConnectionString;
+            
+
         }
     }
 }

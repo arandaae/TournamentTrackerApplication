@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using TrackerLibrary;
+using TrackerLibrary.DataAccess;
+using TrackerLibrary.Models;
 
 namespace TrackerUI
 {
@@ -36,16 +38,22 @@ namespace TrackerUI
                     placeNumberValue.Text,
                     prizeAmountValue.Text,
                     prizePercentageValue.Text);
-
+                
+                //This will create a new prize model
                 foreach (IDataConnection db in GlobalConfig.Connections)
                 {
                     db.CreatePrize(model);
                 }
 
+                placeNameValue.Text = "";
+                placeNumberValue.Text = "";
+                prizeAmountValue.Text = "0";
+                prizePercentageValue.Text = "0";
+
             }
             else
             {
-                MessageBox.Show("This form had invalid information. Please check it and try again.");
+                MessageBox.Show("This form has invalid information. Please check it and try again.");
             }
 
             

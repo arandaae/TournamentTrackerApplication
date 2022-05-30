@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "F:\\Tournament tracker application\\TrackerLibrary\\TrackerLibrary\\TrackerUI\\TrackerUI.csproj": {}
+    "F:\\TournamentTrackerApplication\\TrackerLibrary\\TrackerLibrary\\TrackerUI\\TrackerUI.csproj": {}
   },
   "projects": {
-    "F:\\Tournament tracker application\\TrackerLibrary\\TrackerLibrary\\TrackerLibrary\\TrackerLibrary.csproj": {
+    "F:\\TournamentTrackerApplication\\TrackerLibrary\\TrackerLibrary\\TrackerLibrary\\TrackerLibrary.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\Tournament tracker application\\TrackerLibrary\\TrackerLibrary\\TrackerLibrary\\TrackerLibrary.csproj",
+        "projectUniqueName": "F:\\TournamentTrackerApplication\\TrackerLibrary\\TrackerLibrary\\TrackerLibrary\\TrackerLibrary.csproj",
         "projectName": "TrackerLibrary",
-        "projectPath": "F:\\Tournament tracker application\\TrackerLibrary\\TrackerLibrary\\TrackerLibrary\\TrackerLibrary.csproj",
+        "projectPath": "F:\\TournamentTrackerApplication\\TrackerLibrary\\TrackerLibrary\\TrackerLibrary\\TrackerLibrary.csproj",
         "packagesPath": "C:\\Users\\arand\\.nuget\\packages\\",
-        "outputPath": "F:\\Tournament tracker application\\TrackerLibrary\\TrackerLibrary\\TrackerLibrary\\obj\\",
+        "outputPath": "F:\\TournamentTrackerApplication\\TrackerLibrary\\TrackerLibrary\\TrackerLibrary\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\arand\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -76,14 +76,14 @@
         }
       }
     },
-    "F:\\Tournament tracker application\\TrackerLibrary\\TrackerLibrary\\TrackerUI\\TrackerUI.csproj": {
+    "F:\\TournamentTrackerApplication\\TrackerLibrary\\TrackerLibrary\\TrackerUI\\TrackerUI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\Tournament tracker application\\TrackerLibrary\\TrackerLibrary\\TrackerUI\\TrackerUI.csproj",
+        "projectUniqueName": "F:\\TournamentTrackerApplication\\TrackerLibrary\\TrackerLibrary\\TrackerUI\\TrackerUI.csproj",
         "projectName": "TrackerUI",
-        "projectPath": "F:\\Tournament tracker application\\TrackerLibrary\\TrackerLibrary\\TrackerUI\\TrackerUI.csproj",
+        "projectPath": "F:\\TournamentTrackerApplication\\TrackerLibrary\\TrackerLibrary\\TrackerUI\\TrackerUI.csproj",
         "packagesPath": "C:\\Users\\arand\\.nuget\\packages\\",
-        "outputPath": "F:\\Tournament tracker application\\TrackerLibrary\\TrackerLibrary\\TrackerUI\\obj\\",
+        "outputPath": "F:\\TournamentTrackerApplication\\TrackerLibrary\\TrackerLibrary\\TrackerUI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\arand\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -100,8 +100,8 @@
           "net5.0-windows7.0": {
             "targetAlias": "net5.0-windows",
             "projectReferences": {
-              "F:\\Tournament tracker application\\TrackerLibrary\\TrackerLibrary\\TrackerLibrary\\TrackerLibrary.csproj": {
-                "projectPath": "F:\\Tournament tracker application\\TrackerLibrary\\TrackerLibrary\\TrackerLibrary\\TrackerLibrary.csproj"
+              "F:\\TournamentTrackerApplication\\TrackerLibrary\\TrackerLibrary\\TrackerLibrary\\TrackerLibrary.csproj": {
+                "projectPath": "F:\\TournamentTrackerApplication\\TrackerLibrary\\TrackerLibrary\\TrackerLibrary\\TrackerLibrary.csproj"
               }
             }
           }

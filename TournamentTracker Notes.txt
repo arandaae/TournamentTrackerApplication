@@ -14,3 +14,64 @@ How do we connect to two different data sources to do the same task?
 Static class for data source info 
 
 Interface for data sources
+
+
+
+
+Cleaned up files
+Created seperate folders in TrackerLibrary for DataAccess and Models
+
+-DataAccess conatains
+	-IDataConnection
+	-SqlConnector
+	-TextConnector
+
+-Models contains
+	-MatchupEntryModel
+	-MatchupModel
+	-PersonModel
+	-PrizeModel
+	-TeamModel
+	-TournamentModel
+
+Removed IDataConnection List in GlobalConfig.cs
+-	This will allow the option to use SQL database or create a text file
+-
+
+Created a new class Enums
+-	This will store the Database type options that can be called in GlobalConfig.cs
+- 	This will also decrease the chance of selecting the incorrect Database Type when chosing an option
+
+
+
+Text Connection lesson
+-	Wire-up TextConnector.cs
+-	Each Model will be in its own text file
+-	Create TextConnectorProcessor.cs this will store a method for storing to the file path
+-	Change namespace to TrackerLibrary.DataAccess.TextConnector
+-	Installing the path to where all of the files go will be stored in one folder path	
+-	Created new file path for Data
+- 	Create new app setting in App.config (add key and value for filepath) <add key="filePath" value="F:\Data\TournamentTracker"/>
+-	The method FullFilePath(this string fileName) is an extension method that will store the fileName and return the entire path
+-	The extension method will only be stored here to not create issues between classes
+-	Create new method, ConvertToPrizeModel, that will create a new list of PrizeModel if there is no record
+
+-	Find the max ID
+	-	This is something that the method in the TextConnector could do since we are doing an insert it needs to have the ID
+		
+	-	Add the namespace TrackerLibrary.DataAccess.TextConnector to TextConnector.cs
+
+	-	Rename namespace TrackerLibrary.DataAccess.TextConnector to TrackerLibrary.DataAccess.TextHelpers to avoid conflicting with the class name TextConnector
+
+	-	Add private const string PrizesFile = "PrizesModels.csv to TextConnector.cs
+
+	-	Add new list of PrizeModel that will load the text file and convert the text to List<PrizeModel> to TextConnector.cs
+
+	-	(Find the Max Id) Add variable to order list by descending Id order that gives the first record that has the highest Id, then adds 1
+
+	- 	Add the new record with the new ID
+
+-	Add method to TextConnectorProcessor.cs that will Convert the prizes to list <string> and Save the list<string> to the text file
+
+-	Ran into a bug that would not accept the file path of F:\TournamentTrackerApplication\Data (file path needed to be first child of configuration
+	-	Created a new file Data > TournamentTracker (F:\Data\TournamentTracker)

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "eiaiK6bWOSFtUMzWtTnt52yOOH3dQ+EJxJDsPUMpTEnbMneDP6hCxlWe3PJ7Q7/Fz7bsBFXCCG3PttK907yYwQ==",
+  "dgSpecHash": "TqbFOLqTD1m9HL85xu1C8a1lpgyd/e+FQ9Rr7DoLMliwPoN20O9aGnbdr1LZE6SObfNMsrNq/v0CgmnFCHLJMw==",
   "success": true,
-  "projectFilePath": "F:\\Tournament tracker application\\TrackerLibrary\\TrackerLibrary\\TrackerLibrary\\TrackerLibrary.csproj",
+  "projectFilePath": "F:\\TournamentTrackerApplication\\TrackerLibrary\\TrackerLibrary\\TrackerLibrary\\TrackerLibrary.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\arand\\.nuget\\packages\\azure.core\\1.6.0\\azure.core.1.6.0.nupkg.sha512",
     "C:\\Users\\arand\\.nuget\\packages\\azure.identity\\1.3.0\\azure.identity.1.3.0.nupkg.sha512",

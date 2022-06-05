@@ -75,3 +75,10 @@ Text Connection lesson
 
 -	Ran into a bug that would not accept the file path of F:\TournamentTrackerApplication\Data (file path needed to be first child of configuration
 	-	Created a new file Data > TournamentTracker (F:\Data\TournamentTracker)
+
+
+Creating Team Form
+
+-	Creating event for Create Member button
+
+	-

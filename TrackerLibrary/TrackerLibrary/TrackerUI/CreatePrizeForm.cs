@@ -15,15 +15,6 @@ namespace TrackerUI
 {
     public partial class CreatePrizeForm : Form
     {
-        private void CreatePrizeForm_Load(object sender, EventArgs e)
-        {
-            throw new NotImplementedException();
-        }
-
-        private void teamOneScoreValue_TextChanged(object sender, EventArgs e)
-        {
-            throw new NotImplementedException();
-        }
         public CreatePrizeForm()
         {
             InitializeComponent();
@@ -46,14 +37,12 @@ namespace TrackerUI
                 placeNumberValue.Text = "";
                 prizeAmountValue.Text = "0";
                 prizePercentageValue.Text = "0";
-
             }
             else
             {
                 MessageBox.Show("This form has invalid information. Please check it and try again.");
             }
-
-            
+           
         }
 
         private bool ValidateForm()

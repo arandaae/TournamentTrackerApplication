@@ -169,4 +169,34 @@ Creat Team Form
 		- Call ,in using statement, stored procedure People from SQL database
 		- Create new stored procedure dbo.spPeople_GetAll in SQL Server
 		- Create a new instance in TextConnector.cs of GetPerson_All method
-		
+		- Create new private const string db to replace the repeating connection string 
+
+	-	Ran into bug 
+		-	System.Data.SqlClient.SqlException: 
+		-Fixed bug see notes in Word document
+
+-	Wire up Add member button in CreateTeamForm.cs
+
+	- Create event for when Add Member button is clicked
+
+	- Add a new instance of PersonModel to the Add member button event
+
+	- Add field to remove person from drop down
+
+	- Add field to Add person to selected Team Members list
+
+	- Call WireUpLists() method in the Add Member button event
+
+	- Add null setting in WireUpLists() method
+
+-	Delete Selected button wire up in CreateTeamForm.cs
+
+	- Change button text  and name from delete selected to remove selected
+	- Add event for removeSelectedMemberButton_Click in CreateTeamForm.cs
+	- Add if statement to add member button and remove member button that fixes bug that would break the program if nothing was selected
+
+-	Implement text file in TextConnector.cs by adding return value to GetPerson_All method
+
+-	Add event to Create Team button in CreateTeamForm.cs
+
+	- 

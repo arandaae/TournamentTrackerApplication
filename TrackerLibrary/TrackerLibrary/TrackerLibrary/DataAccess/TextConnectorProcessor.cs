@@ -104,7 +104,10 @@ namespace TrackerLibrary.DataAccess.TextHelpers
                     // where the id of the person = the id of the TeamMember Object
                     t.TeamMembers.Add(people.Where(x => x.Id == int.Parse(id)).First());
                 }
+
+                output.Add(t);
             }
+
             return output;
         }
 

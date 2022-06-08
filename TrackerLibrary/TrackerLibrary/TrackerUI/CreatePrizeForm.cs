@@ -15,9 +15,12 @@ namespace TrackerUI
 {
     public partial class CreatePrizeForm : Form
     {
-        public CreatePrizeForm()
+        IPrizeRequester callingForm;
+        public CreatePrizeForm(IPrizeRequester caller)
         {
             InitializeComponent();
+
+            callingForm = caller; // Creates a variable at the class level that stores what is passed into the contructor 
         }
 
         //This will create a new prize model
@@ -31,12 +34,16 @@ namespace TrackerUI
                     prizeAmountValue.Text,
                     prizePercentageValue.Text);
                                              
-               GlobalConfig.Connection.CreatePrize(model);
-                
-                placeNameValue.Text = "";
-                placeNumberValue.Text = "";
-                prizeAmountValue.Text = "0";
-                prizePercentageValue.Text = "0";
+                GlobalConfig.Connection.CreatePrize(model);
+
+                callingForm.PrizeComplete(model); // Called the parent and implements the model
+
+                this.Close(); // This will close the current PrizeForm when completed
+              
+                //placeNameValue.Text = "";
+                //placeNumberValue.Text = "";
+                //prizeAmountValue.Text = "0";
+                //prizePercentageValue.Text = "0";
             }
             else
             {

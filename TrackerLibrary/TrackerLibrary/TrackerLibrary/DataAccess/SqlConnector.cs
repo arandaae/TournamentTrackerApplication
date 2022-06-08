@@ -12,12 +12,14 @@ namespace TrackerLibrary.DataAccess
 {
     public class SqlConnector : IDataConnection
     {
+        // This const string db will replace the repeating connection string
+        private const string db = "TrackerUI.Properties.Settings.TrackerUIConn";
         public PersonModel CreatePerson(PersonModel model)
         {
             // create new IDbconnection, fill connection with System.Data.SqlClient
             // using statement wraps the parameters so when it hits the end of the scope it destroys the connection properly to
             // prevent against memory leaks.
-            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.CnnString("TrackerUI.Properties.Settings.TrackerUIConn")))
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.CnnString(db)))
             {
                 var p = new DynamicParameters();
                 p.Add("@FirstName", model.FirstName);
@@ -49,7 +51,7 @@ namespace TrackerLibrary.DataAccess
             // create new IDbconnection, fill connection with System.Data.SqlClient
             // using statement wraps the parameters so when it hits the end of the scope it destroys the connection properly to
             //prevent against memory leaks.
-            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.CnnString("TrackerUI.Properties.Settings.TrackerUIConn")))
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.CnnString(db)))
             {
                 var p = new DynamicParameters();
                 p.Add("@PlaceNumber", model.PlaceNumber);
@@ -68,6 +70,23 @@ namespace TrackerLibrary.DataAccess
 
                 return model;
             }
+        }
+
+        /// <summary>
+        /// Returns all people from the database
+        /// </summary>
+        /// <returns></returns>
+        public List<PersonModel> GetPerson_All()
+        {
+            List<PersonModel> output;
+
+            // Connect to SQL database
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.CnnString(db)))
+            {
+                output = connection.Query<PersonModel>("dbo.spPeople_GetAll").ToList();
+            }
+
+            return output;
         }
     }
 }

@@ -200,3 +200,13 @@ Creat Team Form
 -	Add event to Create Team button in CreateTeamForm.cs
 
 	- 
+
+
+-	Couple (loose coupling, they don't really know about each other but they can work with each other)Create Tournament Form and Create Prize Form to work together when clicking Create Prize in Create Tournament Form
+
+	- Create new interface in TrackerUI to perform this
+
+
+-	In SqlConnector.cs, the CreateTournament method is a method that does one thing broken up into multiple subtasks
+
+	- This will be refactored into 3 private methods then called in the CreateTournament Method

@@ -7,12 +7,12 @@ namespace TrackerLibrary.DataAccess
 {
     public class TextConnector : IDataConnection
     {
-        // The value inside of PrizesFile will always stay the same
-        // Prizes in PrizesFile will be uppercase because it is const
         private const string PrizesFile = "PrizeModels.csv";
         private const string PeopleFile = "PersonModels.csv";
         private const string TeamFile = "TeamModels.csv";
         private const string TournamentFile = "TournamentModels.csv";
+        private const string MatchupFile = "MatchupModels.csv";
+        private const string MatchupEntryFile = "MatchupEntryModels.csv";
 
         public PersonModel CreatePerson(PersonModel model)
         {
@@ -104,10 +104,10 @@ namespace TrackerLibrary.DataAccess
 
         public void CreateTournament(TournamentModel model)
         {
-            List<TournamentModel> tournaments = TournamentFile.
-                FullFilePath().
-                LoadFile().
-                ConvertToTournamentModels(TeamFile, PeopleFile, PrizesFile);
+            List<TournamentModel> tournaments = TournamentFile
+                .FullFilePath()
+                .LoadFile()
+                .ConvertToTournamentModels(TeamFile, PeopleFile, PrizesFile);
 
             int currentId = 1;
 
@@ -117,6 +117,8 @@ namespace TrackerLibrary.DataAccess
             }
 
             model.Id = currentId;
+
+            model.SaveRoundsToFile(MatchupFile, MatchupEntryFile);
 
             tournaments.Add(model);
 

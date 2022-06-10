@@ -6,12 +6,13 @@ GO
 -- =============================================
 -- Author:		<Armando Aranda>
 -- Create date: <Create Date,,>
--- Description:	<Description,,>
+-- Description:	<Inserts Matchup Entries to the database>
 -- =============================================
-CREATE PROCEDURE dbo.spTournamentPrizes_Insert
+CREATE PROCEDURE dbo.spMatchupEntries_Insert
 	-- Add the parameters for the stored procedure here
-	@TournamentId int,
-	@PrizeId int,
+	@MatchupId int,
+	@ParentMatchupId int,
+	@TeamCompetingId int,
 	@id int = 0 output
 AS
 BEGIN
@@ -20,10 +21,9 @@ BEGIN
 	SET NOCOUNT ON;
 
     -- Insert statements for procedure here
-	INSERT INTO dbo.TournamentPrizes ( TournamentId, PrizeId)
-	VALUES (@TournamentId, @PrizeId);
+	INSERT INTO dbo.MatchupEntries (MatchupId, ParentMatchupId, TeamCompetingId)
+	VALUES (@MatchupId, @ParentMatchupId, @TeamCompetingId);
 
 	SELECT @id = SCOPE_IDENTITY();
-
 END
 GO

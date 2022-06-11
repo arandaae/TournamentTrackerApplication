@@ -39,9 +39,7 @@ namespace TrackerLibrary
         {
             //Had to add System.Configuration.Configuration nuget package.
             //Also added Settings.settings to TrackerUI to connect to SQL server
-            return ConfigurationManager.ConnectionStrings[name].ConnectionString;
-            
-
+            return ConfigurationManager.ConnectionStrings[name].ConnectionString;          
         }
     }
 }

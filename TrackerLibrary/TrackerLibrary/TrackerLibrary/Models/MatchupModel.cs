@@ -61,7 +61,6 @@ namespace TrackerLibrary.Models
                         output = "Matchup Not Yet Determined"; // If you're in a round where we don't know the winners of previous round
                         break; // 
                     }
-
                 }
 
                 return output;

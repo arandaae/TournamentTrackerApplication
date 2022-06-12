@@ -10,9 +10,9 @@ namespace TrackerLibrary.DataAccess
     public interface IDataConnection
     {
         // Use Create for insert methods and Get for Select statements
-        PrizeModel CreatePrize(PrizeModel model);
-        PersonModel CreatePerson(PersonModel model);
-        TeamModel CreateTeam(TeamModel model);
+        void CreatePrize(PrizeModel model);
+        void CreatePerson(PersonModel model);
+        void CreateTeam(TeamModel model);
         void CreateTournament(TournamentModel model);
 
         void UpdateMatchup(MatchupModel model);
